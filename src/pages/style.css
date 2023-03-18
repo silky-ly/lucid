@@ -1,0 +1,30 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.one {
+	width: 100%;
+	height: auto;
+	/* max-width: 1200px; */
+	background-color: transparent;
+	margin: 0 auto;
+	padding: 20px;
+	padding-top: 60px;
+}
+
+.quote {
+	margin-top: 0px;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 60px;
+	color: #000;
+	line-height: 76px;
+	text-align: center;
+	overflow: hidden;
+	height: auto;
+}
+
+.split-line {
+	overflow: hidden;
+}

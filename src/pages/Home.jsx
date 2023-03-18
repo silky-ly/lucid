@@ -1,6 +1,6 @@
-import React from 'react';
 import Layout from '../layouts/Layout';
 import Projects from './Projects';
+import { WhoAmI } from './WhoAmI';
 
 const Home = () => {
 	return (
@@ -52,6 +52,7 @@ const Home = () => {
 				</div>
 			</div>
 
+			<WhoAmI />
 			<Projects />
 		</Layout>
 	);
