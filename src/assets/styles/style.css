@@ -65,14 +65,16 @@
 }
 
 * {
-	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
 	height: 100%;
 	position: relative;
+	overscroll-behavior: none;
+	overflow-x: hidden;
 }
 
 .navlinks a::before {
@@ -100,6 +102,30 @@ body {
 
 .project-heading:hover span {
 	width: 80%;
+}
+
+.split-line {
+	overflow: hidden;
+}
+
+.project-preview {
+	top: 12%;
+	left: 60%;
+	height: 600px;
+	background: yellow no-repeat 40% 40%;
+}
+
+.project-item span:before {
+	height: 0;
+	color: greenyellow;
+	overflow: hidden;
+	position: absolute;
+	content: attr(data-text);
+	transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+}
+
+.project-item span:hover:before {
+	height: 100%;
 }
 
 /* before:border-b-2 before:border-solid before:border-b-yellow-300 before:w-full before:h-1 */

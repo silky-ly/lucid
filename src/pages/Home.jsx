@@ -1,38 +1,54 @@
 import Layout from '../layouts/Layout';
+import Contact from './Contact';
 import Projects from './Projects';
-import { WhoAmI } from './WhoAmI';
+import Role from './Role';
 
 const Home = () => {
 	return (
 		<Layout>
-			<div className='home h-screen' id='home'>
-				{/* <div className='home-overlay'></div> */}
-
+			<div className='home h-screen relative' id='home'>
 				<div className='home-page'>
 					<section className='w-screen h-screen relative'>
-						<p className='absolute top-48 left-56 h-16 w-2/5 font-clash text-3xl font-semibold truncate'>
-							<q>A versatile Front-End Engineer.</q>
+						<p className='absolute top-36 left-56 h-16 w-2/5 font-clash'>
+							<span className='block uppercase text-xs font-semibold underline decoration-2 underline-offset-8 mb-4'>
+								bio
+							</span>
+							<q className='text-xs truncate'>
+								A versatile Front-End Engineer who enjoys
+								building mininalistic and optimized web
+								applications.
+							</q>
 						</p>
 
 						<div
 							className='absolute h-screen border-l-0.5 border-solid border-black'
 							style={{
-								left: '65%',
+								left: '66%',
 								top: '0',
 							}}
 						></div>
 
 						<div
 							className='absolute border-b-0.5 border-solid border-black'
-							style={{ width: '65vw', top: '50%' }}
+							style={{ width: '66vw', top: '50%' }}
 						></div>
 
-						<div className='absolute bottom-12 right-12'>
+						<div
+							className='absolute top-16 right-16 home-image w-1/4 h-3/4 bg-purple-700'
+							id='content'
+						>
+							<img
+								className='h-full object-cover'
+								src='https://images.unsplash.com/photo-1504802318913-d3f9a487448c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTIwfHxhcmNoaXRlY3R1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60'
+							/>
+						</div>
+
+						<div className='absolute bottom-16 right-12'>
 							<a
-								href=''
-								className='align-middle text-black text-sm font-semibold tracking-widest uppercase no-underline cursor-pointer'
+								href='#projects'
+								className='align-middle text-black text-xs font-semibold tracking-widest uppercase no-underline cursor-pointer'
 							>
-								view projects{' '}
+								get in touch{' '}
 								<svg
 									className='inline align-middle'
 									xmlns='http://www.w3.org/2000/svg'
@@ -43,7 +59,9 @@ const Home = () => {
 									<path
 										className='inline'
 										fill='currentColor'
-										d='M16.01 11H5c-.55 0-1 .45-1 1s.45 1 1 1h11.01v1.79c0 .45.54.67.85.35l2.78-2.79c.19-.2.19-.51 0-.71l-2.78-2.79c-.31-.32-.85-.09-.85.35V11z'
+										fill-rule='evenodd'
+										d='M12 2.25a.75.75 0 0 1 .75.75v16.19l2.47-2.47a.75.75 0 1 1 1.06 1.06l-3.75 3.75a.75.75 0 0 1-1.06 0l-3.75-3.75a.75.75 0 1 1 1.06-1.06l2.47 2.47V3a.75.75 0 0 1 .75-.75Z'
+										clip-rule='evenodd'
 									/>
 								</svg>
 							</a>
@@ -52,8 +70,9 @@ const Home = () => {
 				</div>
 			</div>
 
-			<WhoAmI />
+			<Role />
 			<Projects />
+			<Contact />
 		</Layout>
 	);
 };
